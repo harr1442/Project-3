@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Project4_AlanaHarris {
+	public static void petNames(String[] names) {
+		
+	}
+	public static void petServices(String[] args) {
+		Scanner customerInput = new Scanner(System.in);
+		System.out.println("Welcome to Claws and Effect Pet Clinic");
+		String customer = customerInput.next();
+		System.out.println("Enter the customer name: " + customer);
+		int numPets = customerInput.next();
+		System.out.println("Enter the number of pets: " + numPets);
+		
+		int i;
+		String[] pets = new String[numPets];
+		for (i = 1; i <= numPets; ++i) {
+			String petName = customerInput.next();
+			System.out.println("Enter the name of pet number " + i + ": " + petName);
+			pets[i - 1] = petName;
+		}
+		
+		int zeroTotal = 0;
+		int oneTotal = 0;
+		int twoTotal = 0;
+		int threeTotal = 0;
+		int fourTotal = 0;
+		
+		for (i = 0; i <= numPets; ++i) {
+			int treatment = customerInput.next();
+			System.out.println();
+			System.out.println("Treatment Types:");
+			System.out.println("0. No Treatment (cost: $0.00)");
+			System.out.println("1. Flea/Tick Treatment (cost: $10.00)");
+			System.out.println("2. Grooming (cost: $35.00)");
+			System.out.println("3. Spay/Neuter (cost: $50.00)");
+			System.out.println("4. Boarding - 1 week (cost: $100.00)");
+			System.out.println("Enter treatment for *** " + names[i] + " ***: " + treatment);
+			if (treatment = 0) {
+				++zeroTotal;
+			}
+			else if (treatment = 1) {
+				++oneTotal;
+			}
+			else if (treatment = 2) {
+				++twoTotal;
+			}
+			else if (treatment = 3) {
+				++threeTotal;
+			}
+			else if (treatment = 4) {
+				++fourTotal;
+			}
+		}
+		
+		System.out.println("Total Treatment Amount (" + customer +") : $" + total);
+		System.out.println();
+		System.out.println("Total Service Types Purchased: [" + zeroTotal + ", " + oneTotal +", " + twoTotal + ", " + threeTotal + ", " + fourTotal + "]"); 
+		}
+	}
+}
